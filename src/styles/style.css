@@ -41,15 +41,26 @@ button {
 header, footer, section {
   max-width: 1110px;
   padding: 100px 0;
+  width: 100%;
 }
 
 .z-100 {
   z-index: 100;
 }
 
-.flex-jc-sb-g30 {
+.flex-jc-c {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-jc-sb {
   display: flex;
   justify-content: space-between;
+}
+.flex-dir-col {
+  flex-direction: column;
+}
+.g30 {
   gap: 30px;
 }
 
@@ -95,6 +106,9 @@ h3 {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.text-align-center {
+  text-align: center;
 }
 /** visual style: цвет и фон **/
 .text-color-base {
