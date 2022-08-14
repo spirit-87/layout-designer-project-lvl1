@@ -1,3 +1,11 @@
+@font-face {
+  src: url('/assets/fonts/NeuchaRegular.ttf');
+  font-family: 'Neucha';
+}
+@font-face {
+  src: url('/assets/fonts/OpenSans-Medium.ttf');
+  font-family: 'Open Sans';
+}
 /** CSS STYLE **/
 :root {
   --color-white: #fff;
@@ -9,21 +17,74 @@
   --color-translucent-dark: #908d8b;
   --color-brown: #b09a81;
   --color-blue: #1085c5;
+
+  --font-base: 16px/1.6em 'Open Sans';
+  --section-padding: 0 165px;
 }
-@font-face {
-  src: url('/assets/fonts/NeuchaRegular.ttf');
-  font-family: 'Neucha';
+body {
+  overflow-x: hidden;
+}
+h1 {
+  margin: 0;
+}
+button {
+  border: 0;
+}
+/** position style: position, top, right, bottom, left **/
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+/** box-model style: display, width, height, box-sizing и тд **/
+header, footer, section {
+  max-width: 1110px;
+  padding: 100px 0;
 }
 
+.z-100 {
+  z-index: 100;
+}
+
+.flex-jc-sb-g30 {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.flex-ai-fe {
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-padding {
+  padding: var(--section-padding);
+}
+
+.header {
+  height: 525px;
+}
+.header-btn {
+  padding: 12px 24px;
+  margin: 40px 0 100px 0;
+}
+.header-cap {
+  top: 90px;
+}
+.flex-110 {
+  flex: 1 1 0;
+}
+/** typographic style: font-size, line-height и тд **/
 body {
-  font: 16px/1.6em  Open Sans;
-  color: #2A2626;
+  font: var(--font-base);
+  color: var(--color-dark);
 }
 h1, h2, h3 {
   font-family: 'Neucha';
   line-height: 1.2em;
 }
-h1 {
+.font-size-72 {
   font-size: 72px;
 }
 h2 {
@@ -32,12 +93,75 @@ h2 {
 h3 {
   font-size: 34px;
 }
-
-section {
-  max-width: 1110px;
-  text-align: center;
-  margin:100px auto;
+.uppercase {
+  text-transform: uppercase;
 }
+/** visual style: цвет и фон **/
+.text-color-base {
+  color: var(--color-base);
+}
+.text-color-dark {
+  color: var(--color-dark);
+}
+.text-color-white {
+  color: var(--color-white);
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.bg-color-base {
+  background-color: var(--color-base);
+}
+/** animation style **/
+
+/** others style **/
+
+.section-bg::before {
+  content: "";
+  
+  background-color: var(--color-translucent-dark);
+  background-image: url('/assets/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.1;
+  left:0;
+  top:0;
+}
+
+.header-img {
+  height: 525px;
+  top: 55px;
+  right: -270px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
