@@ -86,6 +86,13 @@ header, footer, section {
 .flex-110 {
   flex: 1 1 0;
 }
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.video {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
 /** typographic style: font-size, line-height и тд **/
 body {
   font: var(--font-base);
